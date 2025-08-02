@@ -1,0 +1,94 @@
+.navbar {
+    border-bottom: 3px solid black;
+    height: 78px;
+    background-color: #6A3FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar-links a {
+    margin: 0 10px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem; /* Make the links bigger */
+    line-height: 78px; /* Center the links vertically within the navbar */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #6A3FFF;
+    border: 3px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    margin-top: 10px; /* Add space at the top */
+    margin-right: 10px; /* Add space at the right */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #6A3FFF;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Default to hidden */
+    flex-direction: column;
+    z-index: 9999; /* Ensure it appears above everything */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for box effect */
+}
+
+.dropdown-menu a {
+    margin: 5px 0;
+    color: black;
+    text-decoration: none;
+}
+
+/* Show dropdown menu when isMenuOpen is true */
+.navbar .dropdown-menu.small-screen {
+    display: flex; /* Show the dropdown menu */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .large-screen {
+        display: none;
+    }
+
+    .small-screen {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .small-screen {
+        display: none;
+    }
+
+    .large-screen {
+        display: flex;
+    }
+}
