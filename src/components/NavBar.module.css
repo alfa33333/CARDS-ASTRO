@@ -28,6 +28,7 @@
     line-height: 78px; /* Center the links vertically within the navbar */
 }
 
+
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -54,7 +55,7 @@
     background-color: #6A3FFF;
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
+    padding: 0px;
     display: none; /* Default to hidden */
     flex-direction: column;
     z-index: 9999; /* Ensure it appears above everything */
@@ -62,9 +63,17 @@
 }
 
 .dropdown-menu a {
-    margin: 5px 0;
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    border-bottom: 3px solid black;
+    padding: 5px;
     color: black;
     text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #3A01FF;
 }
 
 /* Show dropdown menu when isMenuOpen is true */

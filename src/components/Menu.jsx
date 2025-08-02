@@ -18,7 +18,7 @@ function MenuLinks(){
     const linkNames = ["Food Library", "About"];
 
     return (
-        <div className={`${styles['dropdown-menu']} ${styles['small-screen']}`}>
+        <div className={`${styles['dropdown-menu']} ${styles['small-screen']} ${styles['navbar-links']}`}>
             {linkNames.map((name, index) => (
                 <a key={index} href={`#link${index + 1}`}>{name}</a>
             ))}

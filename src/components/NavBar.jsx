@@ -5,7 +5,7 @@ import Menu, {HamButtom, MenuLinks} from './Menu.jsx'; // Importing the Menu com
 
 
 function NavBar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
