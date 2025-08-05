@@ -15,7 +15,6 @@ function App() {
 
   return (
     <div className={style.App}>
-      <NavBar />  
       <Card
         picture="https://picsum.photos/400/300"
         foodName="KIBI"
