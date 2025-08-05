@@ -5,16 +5,23 @@ import NavBar from './NavBar.jsx';
 import style from "../css/app.module.css";
 
 
+const foodItems = [
+  { picture: "https://picsum.photos/400/300", foodName: "KIBI" },
+  { picture: "https://picsum.photos/400/300", foodName: "NotKIBI" },
+];
+
 function LibraryApp() {
   return (
     <div className={style.App}>
       <h1>Library</h1>
-      <Card
-        picture="https://picsum.photos/400/300"
-        foodName="KIBI"
-
-        isCardShown={true}
-      />
+      {foodItems.map((item, index) => (
+        <Card
+          key={index}
+          picture={item.picture}
+          foodName={item.foodName}
+          isCardShown={true}
+        />
+      ))}
       <Card
         picture="https://picsum.photos/400/300"
         foodName="KIBI"
