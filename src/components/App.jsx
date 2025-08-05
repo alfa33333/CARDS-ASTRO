@@ -22,11 +22,6 @@ function LibraryApp() {
           isCardShown={true}
         />
       ))}
-      <Card
-        picture="https://picsum.photos/400/300"
-        foodName="KIBI"
-        isCardShown={true}
-      />
     </div>
   );
 }

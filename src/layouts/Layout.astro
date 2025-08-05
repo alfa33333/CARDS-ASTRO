@@ -16,6 +16,7 @@ import NavBar from '../components/NavBar.jsx';
 	<body>
 		<NavBar client:load/>  
 		<slot />
+		<footer></footer>
 	</body>
 </html>
 
@@ -26,5 +27,14 @@ import NavBar from '../components/NavBar.jsx';
 		width: 100%;
 		height: 100%;
 		background-color: #A50CFF;
+	}
+
+	footer {
+		position: sticky;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		border-top: 3px solid #000;
+		background-color: #6A3FFF;
 	}
 </style>
