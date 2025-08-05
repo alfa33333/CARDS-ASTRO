@@ -23,10 +23,6 @@ function NavBar() {
             </div>
             {isMenuOpen && (
                 <MenuLinks />
-                // <div className={style['dropdown-menu small-screen']}>
-                //     <a href="#link1">Food Library</a>
-                //     <a href="#link2">About</a>
-                // </div>
             )}
         </nav>
     );

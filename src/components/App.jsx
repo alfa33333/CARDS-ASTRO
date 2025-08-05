@@ -33,20 +33,24 @@ function LibraryApp() {
 
 function App() {
   const [isCardShown, setIsCardShown] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState(0);
 
   const toggleCard = () => {
+    const randomIndex = Math.floor(Math.random() * foodItems.length);
+    console.log("Random Index:", randomIndex);
+    setSelectedCard(randomIndex);
     setIsCardShown(!isCardShown);
   };
 
   return (
     <div className={style.App}>
       <Card
-        picture="https://picsum.photos/400/300"
-        foodName="KIBI"
+        picture={foodItems[selectedCard].picture}
+        foodName={foodItems[selectedCard].foodName}
         isCardShown={isCardShown}
-       />
-       <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
-        <Button toggleCard={toggleCard}>{isCardShown ? "Hide" : "Show"}</Button>
+      />
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <Button toggleCard={toggleCard}>{isCardShown ? "Pull" : "Show"}</Button>
        </div>
     </div>
   );

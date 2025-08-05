@@ -1,5 +1,22 @@
 import styles from "./NavBar.module.css"; // Assuming a CSS file for styling
 
+
+const links = [
+  { name: "Food Library", href: "/library" },
+  { name: "Return", href: "/" }
+];
+
+function Links() {
+  return (
+    <>
+                {links.map((link, index) => (
+                <a key={index} href={link.href}>{link.name}</a>
+            ))}
+    </>
+  )
+}
+
+
 function HamButtom({ toggleMenu }) {
   return (
     <div
@@ -15,13 +32,10 @@ function HamButtom({ toggleMenu }) {
 }
 
 function MenuLinks(){
-    const linkNames = ["Food Library", "About"];
 
     return (
         <div className={`${styles['dropdown-menu']} ${styles['small-screen']} ${styles['navbar-links']}`}>
-            {linkNames.map((name, index) => (
-                <a key={index} href={`#link${index + 1}`}>{name}</a>
-            ))}
+            <Links />
         </div>
     );
 }
@@ -32,8 +46,7 @@ function Menu() {
       className={`${styles["navbar-links"]} ${styles["large-screen"]}`}
       style={{ marginLeft: "auto" }}
     >
-      <a href="/library">Food Library</a>
-      <a href="#link2">About</a>
+      <Links />
     </div>
   );
 }
