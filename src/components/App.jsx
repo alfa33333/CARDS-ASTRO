@@ -5,6 +5,24 @@ import NavBar from './NavBar.jsx';
 import style from "../css/app.module.css";
 
 
+function LibraryApp() {
+  return (
+    <div className={style.App}>
+      <h1>Library</h1>
+      <Card
+        picture="https://picsum.photos/400/300"
+        foodName="KIBI"
+
+        isCardShown={true}
+      />
+      <Card
+        picture="https://picsum.photos/400/300"
+        foodName="KIBI"
+        isCardShown={true}
+      />
+    </div>
+  );
+}
 
 function App() {
   const [isCardShown, setIsCardShown] = React.useState(false);
@@ -28,3 +46,4 @@ function App() {
 }
 
 export default App;
+export { LibraryApp };

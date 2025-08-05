@@ -32,7 +32,7 @@ function Menu() {
       className={`${styles["navbar-links"]} ${styles["large-screen"]}`}
       style={{ marginLeft: "auto" }}
     >
-      <a href="#link1">Food Library</a>
+      <a href="/library">Food Library</a>
       <a href="#link2">About</a>
     </div>
   );
