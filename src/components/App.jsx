@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from './card.jsx';
 import Button from './Button.jsx';
-import NavBar from './NavBar.jsx';
 import style from "../css/app.module.css";
 
 
