@@ -1,9 +1,10 @@
 import styles from "./NavBar.module.css"; // Assuming a CSS file for styling
 
+const BASE_URL = import.meta.env.BASE_URL;
 
 const links = [
-  { name: "Food Library", href: "/library" },
-  { name: "Return", href: "/" }
+  { name: "Food Library", href: `${BASE_URL}/library` },
+  { name: "Return", href: `${BASE_URL}/` }
 ];
 
 function Links() {
